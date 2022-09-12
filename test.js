@@ -193,27 +193,28 @@ const data = [
 	{ name: 'Morgan', type: 'student', age: 18 },
 	{ name: 'Chris', type: 'labour', age: 45 },
 ];
- let obj = {}
- let student = data.filter((data)=>{
-  return data.type.indexOf('student') > -1
-
-})
-const labour = data.filter((data)=>{
-  return data.type.indexOf('labour') > -1
-}) 
-//  console.log(student)
-//  console.log(labour)
- 
- class slDAta{
-  constructor(student,labour){
-    this.student = student
-    this.labour = labour
-
-   }
+   
+function stnLabo(array) {
   
-  }
- const second = new slDAta(student,labour);
- console.log({...second})
+  let student = array.filter((array)=>{
+   return array.type.indexOf('student') > -1
+  
+  })
+  let labour = data.filter((data)=>{
+    return data.type.indexOf('labour') > -1
+  }) 
+  class slDAta{
+   constructor(student,labour){
+     this.student = student
+     this.labour = labour
+  
+    }
+   
+   }
+  const second = new slDAta(student,labour);
+  console.log({...second})
+}
+stnLabo(data)
  
 //     "student":[{name:"John",type:"student"},{ name: 'Morgan', type: 'student', age: 18 }],
 // "labour":[	{ name: 'Chris', type: 'labour', age: 45 },]
