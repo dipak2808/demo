@@ -39,7 +39,7 @@
 // x(5,5)
 
 // function display(some) {
-//     document.getElementById("demo").innerHTML= some
+//     document.getEleaaaamentById("demo").innerHTML= some
 // }
 // function myCalculater(num1,num2) {
 //     var sum = num1 + num2
