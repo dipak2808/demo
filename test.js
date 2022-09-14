@@ -143,50 +143,50 @@
         // commonString('helloworld')
 
     //  Problem - 6
-    function modifyArray(arr, callback) {
-        // do something to arr here
-        arr.push(100);
-        // then execute the callback function that was passed
-        callback();
-      }
+//     function modifyArray(arr, callback) {
+//         // do something to arr here
+//         arr.push(100);
+//         // then execute the callback function that was passed
+//         callback();
+//       }
       
-     let arr = [1, 2, 3, 4, 5];
+//      let arr = [1, 2, 3, 4, 5];
       
-      modifyArray(arr, function() {
-        console.log("array has been modified", arr);
-      });
-	// 
-    // problem -7 
-    var string = "Welcome to this Javascript Guide!";
+//       modifyArray(arr, function() {
+//         console.log("array has been modified", arr);
+//       });
+// 	// 
+//     // problem -7 
+//     var string = "Welcome to this Javascript Guide!";
 
- // Output becomes !ediuG tpircsavaJ siht ot emocleW
-// var reverseEntireSentence = reverseBySeparator(string, "");
+//  // Output becomes !ediuG tpircsavaJ siht ot emocleW
+// // var reverseEntireSentence = reverseBySeparator(string, "");
    
-//  // Output becomes emocleW ot siht tpircsavaJ !ediuG
-// var reverseEachWord = reverseBySeparator(reverseEntireSentence, " ");
+// //  // Output becomes emocleW ot siht tpircsavaJ !ediuG
+// // var reverseEachWord = reverseBySeparator(reverseEntireSentence, " ");
 
-// function reverseBySeparator(string, separator) {
-//   return string.split(separator).reverse().join(separator);
+// // function reverseBySeparator(string, separator) {
+// //   return string.split(separator).reverse().join(separator);
   
+// // }
+// // console.log(reverseEntireSentence)
+// // console.log(reverseEachWord)
+// var firstWord = "Mary";
+// var secondWord = "Army";
+
+// isAnagram(firstWord, secondWord); // true
+
+// function isAnagram(first, second) {
+//   // For case insensitivity, change both words to lowercase.
+//   var a = first.toLowerCase();
+//   var b = second.toLowerCase();
+
+//   // Sort the strings, and join the resulting array to a string. Compare the results
+//   a = a.split("").sort().join("");
+//   b = b.split("").sort().join("");
+
+//   return a === b;
 // }
-// console.log(reverseEntireSentence)
-// console.log(reverseEachWord)
-var firstWord = "Mary";
-var secondWord = "Army";
-
-isAnagram(firstWord, secondWord); // true
-
-function isAnagram(first, second) {
-  // For case insensitivity, change both words to lowercase.
-  var a = first.toLowerCase();
-  var b = second.toLowerCase();
-
-  // Sort the strings, and join the resulting array to a string. Compare the results
-  a = a.split("").sort().join("");
-  b = b.split("").sort().join("");
-
-  return a === b;
-}
 //Create a function which takes key of an array of object as an argument and returns expected output below
 const data = [
 	{ name: 'John', type: 'student', age: 20 },
@@ -196,18 +196,25 @@ const data = [
    
 function stnLabo(type) {
    const studnetandlabourData = {}
-  let result = data.filter((d,index,data)=>{
-    console.log('type :>> ', type);
-    console.log('data :>> ', data.type);
-    console.log('type[index] :>> ', type[index])
-   return d.type === type
-  
-  })
-  studnetandlabourData[type] = result
-  return studnetandlabourData
-}
- const d = stnLabo("labour")
-  console.log(d)
+   for (let i = 0; i < type.length; i++) {
+      //  console.log(type[i])
+       
+       let result = data.filter((d,index,data)=>{
+         console.log('type :>> ', type[i]);
+         console.log('d.type :>> ', d.type);
+         return d.type === type[i] 
+         
+        })
+        studnetandlabourData[type[i]] = newresult
+        var newresult = result
+     console.log('result :>> ', result);
+        console.log( studnetandlabourData )
+       
+      }
+    }
+ const d = stnLabo(['student','student','labour'])
+  // console.log(d)
+
 
 // { "student":[{name:"John",type:"student"},{ name: 'Morgan', type: 'student', age: 18 }],
 // "labour":[	{ name: 'Chris', type: 'labour', age: 45 },]
