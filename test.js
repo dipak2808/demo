@@ -194,28 +194,21 @@ const data = [
 	{ name: 'Chris', type: 'labour', age: 45 },
 ];
    
-function stnLabo(array) {
-  
-  let student = array.filter((array)=>{
-   return array.type.indexOf('student') > -1
+function stnLabo(type) {
+   const studnetandlabourData = {}
+  let result = data.filter((d,index,data)=>{
+    console.log('type :>> ', type);
+    console.log('data :>> ', data.type);
+    console.log('type[index] :>> ', type[index])
+   return d.type === type
   
   })
-  let labour = data.filter((data)=>{
-    return data.type.indexOf('labour') > -1
-  }) 
-  class slDAta{
-   constructor(student,labour){
-     this.student = student
-     this.labour = labour
-  
-    }
-   
-   }
-  const second = new slDAta(student,labour);
-  console.log({...second})
+  studnetandlabourData[type] = result
+  return studnetandlabourData
 }
-stnLabo(data)
- 
-//     "student":[{name:"John",type:"student"},{ name: 'Morgan', type: 'student', age: 18 }],
+ const d = stnLabo("labour")
+  console.log(d)
+
+// { "student":[{name:"John",type:"student"},{ name: 'Morgan', type: 'student', age: 18 }],
 // "labour":[	{ name: 'Chris', type: 'labour', age: 45 },]
 // }
